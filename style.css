@@ -1,0 +1,470 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+  scrollbar-color: #4d7fff #e4e4e4;
+  scrollbar-width: thin;
+  border-radius: px;
+}
+
+body {
+    background-color: rgb(30, 30, 30);
+    background-image: url(../pattern.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-blend-mode: difference;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth;
+
+}
+
+/* Fonts */
+@font-face {
+    font-family: 'f1';
+    src: url(StretchPro.otf);
+}
+@font-face {
+    font-family: 'f3';
+    src: url(TS\ Block\ Bold.ttf);
+}
+@font-face {
+    font-family: 'f4';
+    src: url(MellaroseDemo.otf);
+}
+
+/* Navbar */
+nav {
+    width: 95%;
+    max-width: 1600px;
+    background: linear-gradient(to right, rgb(106, 0, 255), rgb(0, 132, 255));
+    margin-top: 25px;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    box-shadow: 0px 0px 15px rgba(106, 0, 255, 0.5);
+    filter: drop-shadow(0px 5px 10px rgba(0,0,0,0.3));
+    position: sticky;
+    top: 12px;
+    z-index: 1000;
+    scroll-behavior: smooth;
+}
+
+nav .logo {
+    height: 80px;
+    object-fit: contain;
+}
+
+nav .home, nav .des {
+    text-decoration: none;
+}
+
+nav .home h1, nav .des h1 {
+    font-size: 2rem;
+    color: white;
+    font-family: 'f1';
+    transition: 0.5s;
+}
+
+nav .home h1:hover, nav .des h1:hover{
+    transform: translateY(-10px);
+    filter: drop-shadow(0px 5px 15px rgba(0,0,0,0.3));
+    border-radius: 25px;
+}
+
+nav .home h1:active, nav .des h1:active{
+    transform: translateY(-10px);
+    filter: drop-shadow(0px 5px 15px rgba(0,0,0,0.3));
+    border-radius: 25px;
+}
+
+
+
+nav p{
+    font-size: 2rem;
+    color: white;
+    font-family: 'f4';
+    transition: 0.5s;
+}
+
+nav ul li{
+    font-family: 'f3';
+    font-size: small;
+    background-color: #515050;
+    margin: 2px;
+    text-align: center;
+    padding: 4px;
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+
+}
+
+
+/*Backdrop Menu start*/
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+
+nav ul.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #2b2b2b;
+    min-width: 180px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.5);
+    border-radius: 15px;
+    padding: 10px 0;
+    z-index: 1001;
+    list-style: none;
+}
+
+
+nav ul.dropdown-menu.show {
+    display: block;
+}
+
+
+nav ul.dropdown-menu li {
+    font-family: 'f3', sans-serif;
+    font-size: 0.9rem;
+    background-color: #414141;
+    margin: 5px 10px;
+    text-align: center;
+    padding: 8px 12px;
+    color: white;
+    border-radius: 10px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+nav ul.dropdown-menu li:hover {
+    background-color: #0084ff;
+    transform: translateY(-2px);
+}
+
+/*End*/
+
+nav ul li:hover{
+    transform: translateX(10px);
+    transition: 0.3s;
+
+}
+
+nav ul a{
+    text-decoration: none;
+}
+
+nav ul .ed li{
+    border-top-right-radius: 12px;
+    border-top-left-radius: 12px;
+}
+
+nav ul .sm li{
+    border-bottom-right-radius: 12px;
+    border-bottom-left-radius: 12px;
+}
+
+
+.con {
+    background-color: whitesmoke;
+    border-radius: 25px;
+    height: 80px;
+    width: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+}
+
+.con:hover{
+    transform: scale(1.05);
+    filter: drop-shadow(0px 2px 10px rgba(0,0,0,0.3));
+}
+
+.con:active{
+    transform: scale(1.05);
+    filter: drop-shadow(0px 2px 10px rgba(0,0,0,0.3));
+}
+
+.con img {
+    height: 70px;
+    width: 70px;
+    margin-top: 5px;
+}
+
+/* Greet Text */
+.greet {
+    text-align: center;
+    color: white;
+    font-family: 'f1';
+    margin: 80px 20px;
+}
+
+.greet b {
+    font-size: 4rem;
+}
+
+.greet h1 {
+    font-size: 4rem;
+    margin: 10px 0;
+}
+
+.greet p {
+    font-size: 1.5rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 300;
+}
+
+/* Sections */
+.Designs {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 80px;
+    padding-bottom: 50px;
+}
+
+.teach, .gaming ,.social {
+    width: 95%;
+    max-width: 1400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Headers */
+.Text {
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+.Text h1 {
+    font-family: 'f3';
+    color: white;
+    font-size: 2.5rem;
+    margin-bottom: 2px;
+}
+
+.line {
+    background: linear-gradient(to right, rgb(106, 0, 255), rgb(0, 132, 255));
+    height: 10px;
+    width: 400px;
+    margin: 0 auto;
+    border-radius: 30px;
+}
+
+/* Grid & Cards Container */
+.now {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    width: 100%;
+}
+
+/* The Card (Figure) */
+figure {
+    background-color: rgb(65, 65, 65);
+    border-radius: 25px;
+    padding: 20px;
+    width: 100%;
+    max-width: 380px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0px 5px 15px rgba(0,0,0,0.3);
+    transition: 0.5s;
+
+}
+
+figure:hover{
+    transform: translateY(-15px);
+    transition: 0.5s;
+    border: white 2px solid;
+}
+
+figure:active{
+    transform: translateY(-15px);
+    transition: 0.5s;
+    border: white 2px solid;
+}
+
+figure img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    object-fit: cover;
+}
+
+figure figcaption {
+    color: white;
+    font-weight: bolder;
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+figure p {
+    color: #ccc;
+    font-size: 14px;
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+figure button {
+    height: 45px;
+    width: 100%;
+    border-radius: 12px;
+    border: white;
+    background-color:rgb(0, 132, 255);
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+figure button:hover{
+    background-color:rgb(65, 65, 65);
+    border: 3px rgb(0, 132, 255) solid;
+    a{
+        color: rgb(0, 132, 255);
+    }
+    
+}
+
+figure button:active{
+    background-color:rgb(65, 65, 65);
+    border: 3px rgb(0, 132, 255) solid;
+    a{
+        color: rgb(0, 132, 255);
+    }
+    
+}
+
+figure button a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    transition: 0.5s;
+}
+
+footer{
+    width: 100%;
+    height: 100%;
+    max-width: 1600px;
+    background: rgb(65, 65, 65);
+    display: flex;
+    flex-direction: column;
+}
+
+footer h1{
+    text-align: center;
+    color: white;
+    font-family: 'f1';
+}
+
+
+footer p{
+    text-align: center;
+    color: white;
+    font-family: 'f1';
+}
+
+footer .foot_icon{
+     transform: translateX(30px);
+     margin-top: 15px;
+     margin: 30px;
+}
+
+footer .foot_icon h2{
+    color: white;
+    font-family: f1;
+
+}
+footer .foot_icon a{
+    color: white;
+    font-family: f1;
+    text-decoration: none;
+    transition: 0.4s;
+}
+
+footer .foot_icon a:hover{
+    color: green;
+}
+
+footer .foot_icon a:active{
+    color: green;
+}
+
+footer .foot_icon img{
+    height:20px;
+    width:20px;
+    position: relative;
+    top: 6px;
+    transform: translateX(6px);
+}
+
+footer .copy{
+    display: block;
+    text-align: center;
+    margin: 70px 0px 8px 0px;
+
+}
+
+footer .copy img{
+    height: 150px;
+    width: 150px;
+}
+
+footer h3{
+    color: white;
+    font-size: small;
+    font-family: 'f3';
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px;
+    }
+    nav .home h1, nav .des h1 {
+        font-size: 1.5rem;
+    }
+    .greet b {
+        font-size: 2rem;
+    }
+    .greet h1 {
+        font-size: 1.8rem;
+    }
+    .Text h1 {
+        font-size: 2rem;
+    }
+}
+
+
+
+/*  All The Copyrights Are Reserved By The Portfolio Owner 2026-2027 © */
